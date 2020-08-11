@@ -22,34 +22,11 @@ mavenJob('AWS DynamoDB- Simple DSL Job') {
 
             branch '$Branch'
 
-            // Add extensions 'SparseCheckoutPaths' and 'PathRestriction'
-            def nodeBuilder = NodeBuilder.newInstance()
-            def sparseCheckout = nodeBuilder.createNode(
-                    'hudson.plugins.git.extensions.impl.SparseCheckoutPaths')
-            sparseCheckout
-                    .appendNode('sparseCheckoutPaths')
-                    .appendNode('hudson.plugins.git.extensions.impl.SparseCheckoutPath')
-                    .appendNode('path', '/')
-            def pathRestrictions = nodeBuilder.createNode(
-                    'hudson.plugins.git.extensions.impl.PathRestriction')
-            pathRestrictions.appendNode('includedRegions', '/.*')
-            extensions {
-                extensions << sparseCheckout
-                extensions << pathRestrictions
-            }
+
         }
     }
 
-    configure {
-        it / 'extensions' / 'hudson.plugins.git.extensions.impl.SparseCheckoutPaths' / 'sparseCheckoutPaths' {
-            'hudson.plugins.git.extensions.impl.SparseCheckoutPath' {
-                path '/'
-            }
-        }
-        it / 'extensions' / 'hudson.plugins.git.extensions.impl.PathRestriction' {
-            includedRegions '/.*'
-        }
-    }
+
 
     triggers {
         scm 'H/15 * * * *'
