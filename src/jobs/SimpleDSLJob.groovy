@@ -32,7 +32,7 @@ mavenJob('AWS DynamoDB- Simple DSL Job') {
         scm 'H/15 * * * *'
     }
 
-    rootPOM 'pom.xml'
+    rootPOM './pom.xml'
     goals 'clean package'
 
 }
