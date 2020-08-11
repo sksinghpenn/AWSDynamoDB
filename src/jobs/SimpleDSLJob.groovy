@@ -10,7 +10,7 @@ mavenJob('AWS DynamoDB- Simple DSL Job') {
         gitParam('Branch') {
             description 'The Git branch to checkout'
             type 'BRANCH'
-            defaultValue 'origin/jenkins-job-dsl'
+            defaultValue 'origin/master'
         }
     }
 
