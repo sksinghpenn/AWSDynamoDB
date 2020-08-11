@@ -22,6 +22,17 @@
 			<version>4.8.1</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.jenkins-ci.plugins</groupId>
+			<artifactId>job-dsl-core</artifactId>
+			<version>1.76</version>
+		</dependency>
 	</dependencies>
+	<repositories>
+		<repository>
+			<id>jenkins</id>
+			<url>https://repo.jenkins-ci.org/public/</url>
+		</repository>
+	</repositories>
 
 </project>
