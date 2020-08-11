@@ -56,6 +56,6 @@ mavenJob('AWS DynamoDB- Simple DSL Job') {
     }
 
     rootPOM 'pom.xml'
-    goals 'clean install'
+    goals 'clean package'
 
 }
