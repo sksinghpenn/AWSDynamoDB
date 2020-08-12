@@ -95,7 +95,7 @@ mavenJob('AWS-DynamoDB-Release-DSL') {
                     '-Dmessage="Release version ' +
                     '${project.artifactId}:${releaseVersion}" ' +
                     '-DdeveloperConnectionUrl=scm:git:' +
-                    'git@gitlab.com:SvenWoltmann/jenkins-tutorial-demo.git'
+                    'git@github.com:sksinghpenn/AWSDynamoDB.git'
             rootPOM "/pom.xml"
         }
 
@@ -104,7 +104,7 @@ mavenJob('AWS-DynamoDB-Release-DSL') {
             goals 'scm:tag ' +
                     '-Dtag=${project.artifactId}-${releaseVersion} ' +
                     '-DdeveloperConnectionUrl=scm:git:' +
-                    'git@gitlab.com:SvenWoltmann/jenkins-tutorial-demo.git'
+                    'git@github.com:sksinghpenn/AWSDynamoDB.git'
             rootPOM "/pom.xml"
         }
 
@@ -122,7 +122,7 @@ mavenJob('AWS-DynamoDB-Release-DSL') {
                     '-Dmessage="Switch to next snapshot version: ' +
                     '${project.artifactId}:${nextSnapshotVersion}" ' +
                     '-DdeveloperConnectionUrl=scm:git:' +
-                    'git@gitlab.com:SvenWoltmann/jenkins-tutorial-demo.git'
+                    'git@github.com:sksinghpenn/AWSDynamoDB.git'
             rootPOM "/pom.xml"
         }
     }
