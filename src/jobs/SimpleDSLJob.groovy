@@ -1,5 +1,5 @@
-mavenJob('AWS DynamoDB- Simple DSL Job') {
-    description 'A very simple demo for the Jenkins Job DSL'
+mavenJob('AWS-DynamoDB-DSL-Job') {
+    description 'DSL Job for snap shot build'
 
 
     logRotator {
